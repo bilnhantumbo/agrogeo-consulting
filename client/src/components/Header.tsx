@@ -24,7 +24,7 @@ export default function Header() {
               <span className="text-white font-bold text-lg">AG</span>
             </div>
             <div className="hidden sm:block">
-              <div className="font-display text-lg font-bold text-secondary">TerraFlux</div>
+              <div className="font-display text-lg font-bold text-secondary">AgroGEO</div>
               <div className="text-xs text-muted-foreground">Consulting</div>
             </div>
           </a>
