@@ -9,16 +9,16 @@ export default function Equipe() {
       nome: "Bilton Gilberto Nhantumbo",
       cargo: "",
       descricao: `PhD em Engenharia Florestal
-Mestre em Engenharia Agricola e Ambiental
-Licenciado em Engenharia Hidraulica e Agua Rural`,
+Mestre em Engenharia Agrícola e Ambiental
+Licenciado em Engenharia Hidráulica Agrícola e Água Rural`,
       especializacoes: [],
     },
     {
       nome: "Nélia Dalúvia Rafael Cambanhane",
       cargo: "",
       descricao: `PhD em Agronomia (Ciencia Do Solo)
-Mestre em Engenharia Agricola e Ambiental
-Licenciado em Engenharia Hidraulica e Agua Rural`,
+Mestra em Engenharia Agrícola e Ambiental
+Licenciada em Engenharia Hidráulica Agrícola e Água Rural`,
       especializacoes: [],
     },
   ];
