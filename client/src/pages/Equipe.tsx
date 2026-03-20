@@ -6,11 +6,19 @@ import Footer from "@/components/Footer";
 export default function Equipe() {
   const equipe = [
     {
-      nome: "Bilton Nhantumbo",
-      cargo: "Fundador & Consultor Principal",
-      descricao: `PhD em Engenharia Florestal – Brasil
-Mestre em Engenharia Agrícola e Ambiental – Brasil
-Licenciado em Engenharia Hidráulica Agrícola e Água Rural – Moçambique`,
+      nome: "Bilton Gilberto Nhantumbo",
+      cargo: "",
+      descricao: `PhD em Engenharia Florestal
+Mestre em Engenharia Agricola e Ambiental
+Licenciado em Engenharia Hidraulica e Agua Rural`,
+      especializacoes: [],
+    },
+    {
+      nome: "Nélia Dalúvia Rafael Cambanhane",
+      cargo: "",
+      descricao: `PhD em Agronomia (Ciencia Do Solo)
+Mestre em Engenharia Agricola e Ambiental
+Licenciado em Engenharia Hidraulica e Agua Rural`,
       especializacoes: [],
     },
   ];
@@ -49,9 +57,12 @@ Licenciado em Engenharia Hidráulica Agrícola e Água Rural – Moçambique`,
                     <h3 className="text-2xl font-bold text-secondary mb-2">
                       {membro.nome}
                     </h3>
-                    <p className="text-accent font-semibold mb-6">
-                      {membro.cargo}
-                    </p>
+
+                    {membro.cargo && (
+                      <p className="text-accent font-semibold mb-6">
+                        {membro.cargo}
+                      </p>
+                    )}
 
                     <div className="text-foreground/80 leading-relaxed whitespace-pre-line mb-6">
                       {membro.descricao}
