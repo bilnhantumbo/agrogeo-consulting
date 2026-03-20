@@ -43,17 +43,17 @@ Licenciado em Engenharia Hidraulica e Agua Rural`,
         {/* Team Section */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-1 gap-12 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {equipe.map((membro, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-border"
                 >
                   {/* Member Header */}
-                  <div className="h-32 bg-gradient-to-r from-secondary to-accent"></div>
+                  <div className="h-20 bg-gradient-to-r from-secondary to-accent"></div>
 
                   {/* Member Info */}
-                  <div className="p-8">
+                  <div className="p-6">
                     <h3 className="text-2xl font-bold text-secondary mb-2">
                       {membro.nome}
                     </h3>
