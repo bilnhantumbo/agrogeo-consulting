@@ -38,17 +38,15 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/logo.png')",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute inset-0 bg-black/20"></div>
-          </div>
+<div className="absolute inset-0 bg-secondary"></div>
+
+<div className="absolute inset-0 flex items-center justify-center opacity-10">
+  <img
+    src="/logo.png"
+    alt="Logo"
+    className="max-w-md w-full"
+  />
+</div>
 
           <div className="relative container mx-auto px-4 py-32 md:py-48">
             <div className="max-w-2xl">
