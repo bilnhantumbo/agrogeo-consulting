@@ -39,12 +39,15 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0"
             style={{
-              backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/HBeoTsGBXiLxMLTjN5WUcE/sandbox/n2XPbKaSjjXnBbjLrjYeWe-img-1_1770150596000_na1fn_aGVyby1hZ3JvZ2Vv.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSEJlb1RzR0JYaUx4TUxUak41V1VjRS9zYW5kYm94L24yWFBiS2FTampYbkJiakxyalllV2UtaW1nLTFfMTc3MDE1MDU5NjAwMF9uYTFmbl9hR1Z5YnkxaFozSnZaMlZ2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=kN7Q3FQLd8W3jXnwR9O4toAMaTNiTo3zC7tPydPhcjDlo7nUq2UFvKKjij-bIBazN2WgGYITtf5oQ7BbDJi4PPbXU15z7q88Kc79g9nH2dwsVgQVc9sWcTM0um2FmHqVM9SXwKbC0v6krV4Xqz~9PDNKe0ChU30bX5ULr0Af1tQNX2unk6o~~lczC8ndNi2MkV39jy7tjldaPVJhIpijJzpkZs3-xq-j84Zk5n-y9nhKkyL9tKd513TuSLncvBMCxwh~MiyZ6x5PCkonU0lY3UEqqpirbKzNEVKlv8Xl4Gb6x8Q3d93MkVq1OB4e03P1PhVGjZE~3zUmkRQOoAYqTA__')`,
+              backgroundImage: "url('/logo.png')",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-black/20"></div>
           </div>
 
           <div className="relative container mx-auto px-4 py-32 md:py-48">
