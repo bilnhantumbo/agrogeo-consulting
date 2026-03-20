@@ -40,11 +40,11 @@ export default function Home() {
         <section className="relative overflow-hidden">
 <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent"></div>
 
-<div className="absolute inset-0 flex items-center justify-center opacity-5">
+<div className="absolute inset-0 flex items-center justify-center opacity-20">
   <img
     src="/logo.png"
     alt="Logo"
-    className="max-w-md w-full"
+    className="max-w-2xl w-full"
   />
 </div>
 
