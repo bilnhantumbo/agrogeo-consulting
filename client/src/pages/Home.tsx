@@ -38,9 +38,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-<div className="absolute inset-0 bg-secondary"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent"></div>
 
-<div className="absolute inset-0 flex items-center justify-center opacity-10">
+<div className="absolute inset-0 flex items-center justify-center opacity-5">
   <img
     src="/logo.png"
     alt="Logo"
