@@ -1,6 +1,6 @@
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,73 +15,83 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b border-border">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <>
+      {/* Sidebar Desktop */}
+      <aside className="hidden md:flex flex-col fixed top-0 left-0 h-full w-64 bg-background border-r border-border p-6 z-50">
+        
         {/* Logo */}
         <Link href="/">
-          <a className="flex items-center gap-2 no-underline">
+          <a className="flex items-center gap-3 mb-10 no-underline">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
               <span className="text-white font-bold text-lg">AG</span>
             </div>
-            <div className="hidden sm:block">
+            <div>
               <div className="font-display text-lg font-bold text-secondary">AgroGEO</div>
               <div className="text-xs text-muted-foreground">Consulting</div>
             </div>
           </a>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Menu vertical */}
+        <nav className="flex flex-col gap-4">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
-              <a className="text-foreground hover:text-accent transition-colors duration-200 font-medium text-sm">
+              <a className="text-foreground hover:text-accent transition-colors font-medium no-underline">
                 {item.label}
               </a>
             </Link>
           ))}
+        </nav>
+
+        {/* Botão */}
+        <div className="mt-auto">
+          <Link href="/contacto">
+            <a className="block text-center px-4 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-opacity-90 transition-all no-underline">
+              Fale Connosco
+            </a>
+          </Link>
+        </div>
+      </aside>
+
+      {/* Mobile Header */}
+      <header className="md:hidden sticky top-0 z-50 bg-background border-b border-border">
+        <div className="flex items-center justify-between px-4 py-4">
+          
+          {/* Logo */}
+          <Link href="/">
+            <a className="flex items-center gap-2 no-underline">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
+                <span className="text-white font-bold text-sm">AG</span>
+              </div>
+              <span className="font-bold text-secondary">AgroGEO</span>
+            </a>
+          </Link>
+
+          {/* Botão menu */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
-        {/* CTA Button */}
-        <Link href="/contacto">
-          <a className="hidden md:inline-block px-6 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-opacity-90 transition-all duration-200 no-underline">
-            Fale Connosco
-          </a>
-        </Link>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </nav>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden border-t border-border bg-card">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+        {/* Menu mobile */}
+        {isOpen && (
+          <div className="px-4 pb-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <a
-                  className="text-foreground hover:text-accent transition-colors py-2 no-underline"
+                  className="py-2 no-underline"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </a>
               </Link>
             ))}
-            <Link href="/contacto">
-              <a
-                className="px-6 py-2 bg-accent text-accent-foreground rounded-lg font-medium text-center no-underline"
-                onClick={() => setIsOpen(false)}
-              >
-                Fale Connosco
-              </a>
-            </Link>
           </div>
-        </div>
-      )}
-    </header>
+        )}
+      </header>
+    </>
   );
 }
