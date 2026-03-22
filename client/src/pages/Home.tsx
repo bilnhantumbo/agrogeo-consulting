@@ -92,7 +92,7 @@ export default function Home() {
                 </h2>
 
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  A AgroGeo Consulting é uma consultoria técnica independente, dedicada a apoiar projetos agrícolas, ambientais e hídricos, oferecendo soluções sustentáveis, eficientes e baseadas em dados.
+                  A AgroGeo Consulting é uma consultoria técnica independente, dedicada a apoiar projetos agrícolas, ambientais e hídricos, oferece soluções sustentáveis, eficientes e baseadas em dados.
                 </p>
               </div>
             </div>

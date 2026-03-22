@@ -16,7 +16,7 @@ Licenciado em Engenharia Hidráulica Agrícola e Água Rural`,
     {
       nome: "Nélia Dalúvia Rafael Cambanhane",
       cargo: "",
-      descricao: `PhD em Agronomia (Ciencia Do Solo)
+      descricao: `PhD em Agronomia e Ciência Do Solo
 Mestra em Engenharia Agrícola e Ambiental
 Licenciada em Engenharia Hidráulica Agrícola e Água Rural`,
       especializacoes: [],
