@@ -1,16 +1,17 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Header from "./components/Header"; // 👈 IMPORTANTE
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Areas from "./pages/Areas";
 import Servicos from "./pages/Servicos";
 import Sobre from "./pages/Sobre";
 import Equipe from "./pages/Equipe";
 import Contacto from "./pages/Contacto";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Router() {
   return (
@@ -22,10 +23,27 @@ function Router() {
       <Route path="/equipe" component={Equipe} />
       <Route path="/contacto" component={Contacto} />
       <Route path="/404" component={NotFound} />
-      <Route component={NotFound} /> agrogeo-consulting@1.0.0 dev G:\CONSULT\Criação de site para consultoria\agrogeo-consulting-completo\agrogeo-consulting
-
- 
+      <Route component={NotFound} />
     </Switch>
+  );
+}
+
+// 🔥 ANIMAÇÃO FUNCIONANDO EM TODAS AS PÁGINAS
+function AnimatedRouter() {
+  const [location] = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
+        <Router key={location} />
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
@@ -36,12 +54,12 @@ function App() {
         <TooltipProvider>
           <Toaster />
 
-          {/* 👇 SIDEBAR */}
+          {/* SIDEBAR */}
           <Header />
 
-          {/* 👇 CONTEÚDO PRINCIPAL */}
+          {/* CONTEÚDO */}
           <div className="md:ml-64 min-h-screen p-4">
-            <Router />
+            <AnimatedRouter />
           </div>
 
         </TooltipProvider>
