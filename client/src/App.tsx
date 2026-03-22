@@ -22,7 +22,9 @@ function Router() {
       <Route path="/equipe" component={Equipe} />
       <Route path="/contacto" component={Contacto} />
       <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
+      <Route component={NotFound} /> agrogeo-consulting@1.0.0 dev G:\CONSULT\Criação de site para consultoria\agrogeo-consulting-completo\agrogeo-consulting
+
+ 
     </Switch>
   );
 }
