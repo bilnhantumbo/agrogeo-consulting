@@ -44,13 +44,13 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <a href="mailto:info@agrogeo.mz" className="hover:text-accent transition-colors">
+                <a href="biltongilberto0@gmail.com" className="hover:text-accent transition-colors">
                   info@agrogeo.mz
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="tel:+258843000000" className="hover:text-accent transition-colors">
+                <a href="tel:+55 21975596139" className="hover:text-accent transition-colors">
                   +258 84 300 0000
                 </a>
               </div>
