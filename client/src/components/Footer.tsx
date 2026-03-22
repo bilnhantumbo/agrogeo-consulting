@@ -44,14 +44,19 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <a href="biltongilberto0@gmail.com" className="hover:text-accent transition-colors">
-                  info@agrogeo.mz
+                <a href="mailto:biltongilberto0@gmail.com" className="hover:text-accent transition-colors">
+                  biltongilberto0@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="tel:+55 21975596139" className="hover:text-accent transition-colors">
-                  +258 84 300 0000
+                <a 
+                  href="https://wa.me/5521975596139?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20consultoria"
+                  className="hover:text-accent transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (21) 97559-6139
                 </a>
               </div>
               <div className="flex items-center gap-2">
