@@ -1,5 +1,6 @@
 import { ArrowRight, Leaf, Droplets, Zap, BarChart3 } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -34,126 +35,143 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background">
       <main className="flex-1">
         
-        {/* HERO */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent"></div>
+        {/* ANIMAÇÃO GLOBAL */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
 
-          <div className="absolute inset-0 flex items-center justify-center opacity-10">
-            <img src="/logo.png" alt="Logo" className="max-w-2xl w-full" />
-          </div>
+          {/* HERO */}
+          <section className="relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent"></div>
 
-          <div className="relative container mx-auto px-4 md:px-8 py-20 md:py-28">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Soluções Inteligentes para Agricultura, Água e Meio Ambiente
-              </h1>
+            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <img src="/logo.png" alt="Logo" className="max-w-2xl w-full" />
+            </div>
 
-              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Tecnologia, dados e experiência técnica aplicadas a projetos ambientais, agrícolas e hídricos.
-              </p>
+            <div className="relative container mx-auto px-4 md:px-8 py-20 md:py-28">
+              <div className="max-w-3xl">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                  Soluções Inteligentes para Agricultura, Água e Meio Ambiente
+                </h1>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/areas">
-                  <a className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-opacity-90 transition-all no-underline">
-                    Conheça Nossas Áreas <ArrowRight size={20} />
-                  </a>
-                </Link>
+                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+                  Tecnologia, dados e experiência técnica aplicadas a projetos ambientais, agrícolas e hídricos.
+                </p>
 
-                <Link href="/contacto">
-                  <a className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-all border border-white/30 no-underline">
-                    Fale Connosco
-                  </a>
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/areas">
+                    <a className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-opacity-90 transition-all no-underline">
+                      Conheça Nossas Áreas <ArrowRight size={20} />
+                    </a>
+                  </Link>
+
+                  <Link href="/contacto">
+                    <a className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-all border border-white/30 no-underline">
+                      Fale Connosco
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* SOBRE */}
-        <section className="py-14 md:py-20 bg-white">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-6">
-                Sobre a AgroGeo Consulting
+          {/* SOBRE */}
+          <motion.section
+            className="py-14 md:py-20 bg-white"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-3xl mx-auto text-center mb-12">
+                <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                  Sobre a AgroGeo Consulting
+                </h2>
+
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  A AgroGeo Consulting é uma consultoria técnica independente, dedicada a apoiar projetos agrícolas, ambientais e hídricos, oferecendo soluções sustentáveis, eficientes e baseadas em dados.
+                </p>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* ÁREAS */}
+          <motion.section
+            className="py-14 md:py-20 bg-background"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="container mx-auto px-4 md:px-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4 text-center">
+                Áreas de Atuação
               </h2>
 
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                A AgroGeo Consulting é uma consultoria técnica independente, dedicada a apoiar projetos agrícolas, ambientais e hídricos, oferecendo soluções sustentáveis, eficientes e baseadas em dados. Combinamos conhecimento técnico, tecnologia e análise de dados para apoiar decisões seguras e eficientes.
+              <p className="text-center text-foreground/70 mb-12 max-w-2xl mx-auto">
+                Oferecemos expertise em múltiplas áreas complementares
               </p>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {areas.map((area, index) => {
+                  const Icon = area.icon;
+
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="group bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all border border-border hover:border-accent"
+                    >
+                      <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${area.color} flex items-center justify-center mb-6`}>
+                        <Icon className="text-white" size={28} />
+                      </div>
+
+                      <h3 className="text-xl font-semibold text-secondary mb-3">
+                        {area.title}
+                      </h3>
+
+                      <p className="text-foreground/70 leading-relaxed">
+                        {area.description}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        </section>
+          </motion.section>
 
-        {/* ÁREAS */}
-        <section className="py-14 md:py-20 bg-background">
-          <div className="container mx-auto px-4 md:px-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4 text-center">
-              Áreas de Atuação
-            </h2>
+          {/* CTA */}
+          <motion.section
+            className="py-14 md:py-20 bg-gradient-to-r from-secondary to-accent text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="container mx-auto px-4 md:px-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Pronto para Transformar Seu Projeto?
+              </h2>
 
-            <p className="text-center text-foreground/70 mb-12 max-w-2xl mx-auto">
-              Oferecemos expertise em múltiplas áreas complementares para atender às necessidades complexas de projetos sustentáveis
-            </p>
+              <p className="text-lg md:text-xl text-white/90 mb-8">
+                Entre em contacto connosco para discutir como podemos ajudar.
+              </p>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {areas.map((area, index) => {
-                const Icon = area.icon;
-
-                return (
-                  <div
-                    key={index}
-                    className="group bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-border hover:border-accent"
-                  >
-                    <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${area.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                      <Icon className="text-white" size={28} />
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-secondary mb-3">
-                      {area.title}
-                    </h3>
-
-                    <p className="text-foreground/70 leading-relaxed">
-                      {area.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="text-center mt-10">
-              <Link href="/areas">
-                <a className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-opacity-90 transition-all no-underline">
-                  Ver Todas as Áreas <ArrowRight size={20} />
+              <Link href="/contacto">
+                <a className="inline-flex items-center gap-2 px-8 py-3 bg-white text-secondary rounded-lg font-semibold hover:bg-opacity-90 transition-all no-underline">
+                  Iniciar Conversa <ArrowRight size={20} />
                 </a>
               </Link>
             </div>
-          </div>
-        </section>
+          </motion.section>
 
-        {/* CTA */}
-        <section className="py-14 md:py-20 bg-gradient-to-r from-secondary to-accent relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          </div>
-
-          <div className="relative container mx-auto px-4 md:px-8 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Pronto para Transformar Seu Projeto?
-            </h2>
-
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Entre em contacto connosco para discutir como podemos apoiar seus objetivos de sustentabilidade e eficiência.
-            </p>
-
-            <Link href="/contacto">
-              <a className="inline-flex items-center gap-2 px-8 py-3 bg-white text-secondary rounded-lg font-semibold hover:bg-opacity-90 transition-all no-underline">
-                Iniciar Conversa <ArrowRight size={20} />
-              </a>
-            </Link>
-          </div>
-        </section>
-
+        </motion.div>
       </main>
 
       <Footer />
