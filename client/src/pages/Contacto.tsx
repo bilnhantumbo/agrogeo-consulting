@@ -63,21 +63,26 @@ export default function Contacto() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-secondary mb-1">Email</h3>
-                      <a href="mailto:info@agrogeo.mz" className="text-foreground/70 hover:text-accent transition-colors">
-                        info@agrogeo.mz
+                      <a href="mailto:biltongilberto0@gmail.com" className="text-foreground/70 hover:text-accent transition-colors">
+                        biltongilberto0@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  {/* Phone */}
+                  {/* WhatsApp */}
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center flex-shrink-0">
                       <Phone className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-secondary mb-1">Telefone</h3>
-                      <a href="tel:+258843000000" className="text-foreground/70 hover:text-accent transition-colors">
-                        +258 84 300 0000
+                      <h3 className="font-semibold text-secondary mb-1">WhatsApp</h3>
+                      <a 
+                        href="https://wa.me/5521975596139?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20consultoria" 
+                        className="text-foreground/70 hover:text-accent transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        (21) 97559-6139
                       </a>
                     </div>
                   </div>
