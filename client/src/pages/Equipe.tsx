@@ -21,6 +21,13 @@ Mestra em Engenharia Agrícola e Ambiental
 Licenciada em Engenharia Hidráulica Agrícola e Água Rural`,
       especializacoes: [],
     },
+    {
+      nome: "Inácio Alfredo Chauque",
+      cargo: "",
+      descricao: `Mestre em Mudanças Climáticas e Gestão de Recursos Naturais
+Licenciado em Engenharia Hidráulica Agrícola e Água Rural`,
+      especializacoes: [],
+    },
   ];
 
   return (
@@ -35,7 +42,7 @@ Licenciada em Engenharia Hidráulica Agrícola e Água Rural`,
               Nossa Equipe
             </h1>
             <p className="text-xl text-white/90 max-w-2xl">
-              Liderança técnica com formação sólida e reconhecimento académico.
+              Equipe técnica com formação sólida e reconhecimento académico.
             </p>
           </div>
         </section>
@@ -43,17 +50,17 @@ Licenciada em Engenharia Hidráulica Agrícola e Água Rural`,
         {/* Team Section */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {equipe.map((membro, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-border"
+                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-border h-full flex flex-col"
                 >
                   {/* Member Header */}
                   <div className="h-20 bg-gradient-to-r from-secondary to-accent"></div>
 
                   {/* Member Info */}
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-2xl font-bold text-secondary mb-2">
                       {membro.nome}
                     </h3>
@@ -64,7 +71,7 @@ Licenciada em Engenharia Hidráulica Agrícola e Água Rural`,
                       </p>
                     )}
 
-                    <div className="text-foreground/80 leading-relaxed whitespace-pre-line mb-6">
+                    <div className="text-foreground/80 leading-relaxed whitespace-pre-line mb-6 flex-1">
                       {membro.descricao}
                     </div>
 
